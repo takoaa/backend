@@ -1,6 +1,10 @@
 package com.sebaixia.business.entities;
 import java.util.Map;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sebaixia.business.services.MapConverter;
 
 import java.util.Date;
@@ -15,6 +19,8 @@ public class Tarif {
 
 	    @ManyToOne
 	    @JoinColumn(name = "material")
+	    @OnDelete(action = OnDeleteAction.CASCADE)
+	    @JsonIgnore
 	    private Matiere material; // Many-to-one relationship with Matiere
 	    private String thickness; 
 

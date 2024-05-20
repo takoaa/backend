@@ -1,6 +1,10 @@
 package com.sebaixia.business.dto;
 
 
+
+
+
+
 public class SignupRequest {
 
     private String email;

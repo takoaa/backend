@@ -1,4 +1,5 @@
 package com.sebaixia.business.services;
+import com.sebaixia.business.services.AuthService;
 import com.sebaixia.business.dao.CustomerRepository;
 import com.sebaixia.business.dto.SignupRequest;
 import com.sebaixia.business.entities.Customer;
@@ -8,6 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
+
 public class AuthServiceImpl implements AuthService {
 
     private final CustomerRepository customerRepository;

@@ -41,7 +41,9 @@ public class MaterialService {
     public List<Matiere> getAllMaterials() {
         return materialRepository.findAll();
     }
-
+    public Matiere addMaterial(Matiere material) {
+        return materialRepository.save(material);
+    }
     public Matiere updateMaterial(Matiere material) {
         return materialRepository.save(material);
     }

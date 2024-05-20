@@ -32,9 +32,9 @@ public class WebSecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity security) throws Exception {
         return security.csrf().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/signup", "/login").permitAll()
+                .requestMatchers("/signup", "/login","/api/**").permitAll()
                 .and()
-                .authorizeHttpRequests().requestMatchers("/api/**")
+                .authorizeHttpRequests().requestMatchers("/api/workflow")
                 .authenticated()
                 .and()
                 .sessionManagement()
